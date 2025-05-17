@@ -1,39 +1,103 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
+/* style.css */
+
+/* Base Reset and Fonts */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* Header */
 header {
-  background-color: #004080;
-  color: white;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
 }
 
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Section Styling */
 section {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background-color: white;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
 }
 
 h2 {
-  color: #004080;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #4b6cb7;
 }
 
-ul {
-  padding-left: 20px;
+p, li {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
+/* Skills List */
+.skills ul,
+.projects ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills li,
+.projects li {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  padding: 8px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.skills li:hover,
+.projects li:hover {
+  background: #c7d2fe;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #004080;
-  color: white;
-  margin-top: 20px;
+  padding: 30px 10px;
+  background-color: #1e1e2f;
+  color: #ccc;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 15px;
+  }
+  }
